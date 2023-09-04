@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../shared/appstyle.dart';
 
 class CartPage extends StatefulWidget {
@@ -15,7 +14,7 @@ class _CartPageState extends State<CartPage> {
     return Scaffold(
       body: Center(
         child: Text(
-          "This is Home",
+          "This is Cart",
           style: appstyle(40, Colors.black, FontWeight.bold),
         ),
       ),

@@ -1,24 +1,79 @@
+import 'package:ecommerce_app/controllers/mainscreen_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-class BottomNav extends StatelessWidget {
-  const BottomNav({
-    super.key, this.onTap, this.icon,
+import 'bottom_Nav_widget.dart';
+
+class BottomNavBar extends StatelessWidget {
+  const BottomNavBar({
+    super.key,
   });
-
-  final void Function()? onTap;
-  final IconData? icon;
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: SizedBox(
-        height: 36,
-        width: 36,
+    return Consumer<MainScreenNotifier>(
+      builder:(context,mainScreenNotifier,child){
+        return  SafeArea(
+        child: Padding(
+            padding: EdgeInsets.all(8),
+            child: Container(
+              padding: EdgeInsets.all(12),
+              margin: EdgeInsets.symmetric(horizontal: 10),
+              decoration: BoxDecoration(
+                  color: Colors.black,
+                  borderRadius: BorderRadius.all(Radius.circular(16))),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  BottomNavWidget(
+                    onTap: () {
+                      mainScreenNotifier.pageIndex=0;
+                    },
+                    icon:mainScreenNotifier.pageIndex==0
+                    ?Icons.home
+                    :Icons.home_outlined,
+               
+                  ),
+                  BottomNavWidget(
+                    onTap: () {
+                       mainScreenNotifier.pageIndex=1;
+                    },
+                   icon:mainScreenNotifier.pageIndex==1
+                    ?Icons.search
+                    :Icons.search,
+                   
+                  ),
+                  BottomNavWidget(
+                    onTap: () {
+                       mainScreenNotifier.pageIndex=2;
+                    },
+                      icon:mainScreenNotifier.pageIndex==2
+                    ?Icons.add
+                    :Icons.add_circle_outline,
+                  ),
+                  BottomNavWidget(
+                    onTap: () {
+                       mainScreenNotifier.pageIndex=3;
+                    },
+                      icon:mainScreenNotifier.pageIndex==3
+                    ?Icons.shopping_cart
+                    :Icons.shopping_cart_outlined,
+                  ),
+                  BottomNavWidget(
+                    onTap: () {
+                       mainScreenNotifier.pageIndex=4;
+                    },
+                      icon:mainScreenNotifier.pageIndex==4
+                    ?Icons.person
+                    :Icons.person_outline,
+                  ),
+                ],
+              ),
+            )));
 
-        child: Icon(icon,color: Colors.white,),
-      ),
+      }
     );
+ 
   }
 }

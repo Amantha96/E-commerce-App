@@ -14,7 +14,7 @@ class _SearchPageState extends State<SearchPage> {
     return Scaffold(
       body: Center(
         child: Text(
-          "This is Home",
+          "This is Search",
           style: appstyle(40, Colors.black, FontWeight.bold),
         ),
       ),
