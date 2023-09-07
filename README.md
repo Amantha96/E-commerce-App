@@ -1,16 +1,4 @@
-# ecommerce_app
+<h1>E-commerce Shoes Collection Flutter App</h1>
+<p>Welcome to the E-commerce Shoes Collection Flutter App! This mobile application is designed to provide users with a seamless and enjoyable shopping experience for shoes of all styles. Built with Flutter, it combines a user-friendly interface, stunning visuals, and powerful functionality to create a top-notch shopping platform for footwear enthusiasts.</p>
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img align="left" alt="coding" width="400" src="https://github.com/Amantha96/E-commerce-App/blob/master/Athletics%20Shoes.png">
